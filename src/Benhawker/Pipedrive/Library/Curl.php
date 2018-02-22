@@ -44,7 +44,10 @@ class Curl
         $this->setOpt(CURLOPT_USERAGENT, self::USER_AGENT)
              ->setOpt(CURLOPT_HEADER, false)
              ->setOpt(CURLOPT_RETURNTRANSFER, true)
-             ->setOpt(CURLOPT_HTTPHEADER, array("Accept: application/json"));
+             ->setOpt(CURLOPT_HTTPHEADER, array("Accept: application/json"))
+             ->setOpt(CURLOPT_CONNECTTIMEOUT, 10)
+             ->setOpt(CURLOPT_TIMEOUT, 30);
+                
     }
 
     /**
